@@ -7,7 +7,11 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-
+	strategy:
+		matrix:
+			java: [11, 17]
+			
+	name: Build with Javaa ${{matrix.java"}}
     steps:
     - uses: actions/checkout@v2
 
